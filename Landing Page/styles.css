@@ -183,31 +183,17 @@ li {
     opacity: 70%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* footer */
 
 footer {
     background-color: #1f2937;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    padding: 3rem 0;
 }
 
