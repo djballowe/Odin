@@ -4,9 +4,10 @@ html {
 
 body, 
 h2, 
-h3 {
+h3,
+p {
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto';
 }
 
 .head-background {
@@ -77,38 +78,85 @@ button {
 .somerandom {
     justify-content: center;
     display: flex;
+    padding: 2rem;
+    font-size: 1.5em;
 }
 
 .whole {
     max-width: 200px;
+    text-align: center;
+    margin: 0 2rem;
 }
 
 .pictures {
     display: flex;
-    
+    justify-content: center;
+    padding: 1rem;
 }
 
 .square {
-    height: 50px;
-    width: 50px;
-    border: 1px solid royalblue;
+    height: 100px;
+    width: 100px;
+    border: 2px solid royalblue;
     border-radius: 8px;
 }
 
+.text {
+    font-size: 13px;
+    opacity: 60%;
+    max-width: 100px;
+}
 
 
-
-
-
-
-
-
-
-
-
-.quote {
+/* Middle photos */
+.background-quote {
     background-color: #e5e7eb;
 }
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+.quote-container p {
+    font-size: 36px;
+    font-style: italic;
+    
+}
+
+.thor {
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.thor p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: #1f2937;
