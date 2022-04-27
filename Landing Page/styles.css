@@ -2,8 +2,11 @@ html {
     box-sizing: border-box;
 }
 
-body {
+body, 
+h2, 
+h3 {
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .head-background {
@@ -41,10 +44,15 @@ li {
 .header-notheader {
     display: flex;
     justify-content: space-between;
+    padding: 2rem 0;
 }
 
 .header-text {
     max-width: 40%;
+}
+
+.header-text p {
+    opacity: 60%;
 }
 
 .image {
@@ -63,6 +71,41 @@ button {
 
 }
 
+/* Middle photos */
+
+
+.somerandom {
+    justify-content: center;
+    display: flex;
+}
+
+.whole {
+    max-width: 200px;
+}
+
+.pictures {
+    display: flex;
+    
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    border: 1px solid royalblue;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .quote {
     background-color: #e5e7eb;
 }
@@ -71,3 +114,4 @@ footer {
     background-color: #1f2937;
     color: white;
 }
+
