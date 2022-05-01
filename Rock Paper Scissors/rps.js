@@ -1,5 +1,5 @@
 function computerPlay() {
-    let choice = ['paper'];
+    let choice = ['paper', 'rock', 'scissors'];
     let ans = Math.floor(Math.random()*choice.length);
     let value = choice[ans];
     return value;
@@ -40,33 +40,42 @@ function game(human, cpu) {
     let roundNumber = 0;
     let humanScore = 0;
     let computerScore = 0;
-    if (cpu === 'paper' && human === 'rock') {
-        humanScore++;
+    for (let i = 0; i < 4; i++) {
+        console.log(playRound(pSelection, cSelection));
+        if (cpu === 'paper' && human === 'rock') {
+            humanScore++;
+            Round++;
+        }
+        if (cpu === 'scissors' && human === 'rock') {
+            computerScore++;
+            roundNumber++;
+        }
+        if (cpu === 'rock' && human === 'paper') {
+            humanScore++;
+            roundNumber++;
+        }
+        if (cpu === 'scissors' && human === 'paper') {
+            computerScore++;
+            roundNumber++;
+        }
+        if (cpu === 'paper' && human === 'scissors') {
+            humanScore++;
+            roundNumber++;
+        }
+        if (cpu === 'rock' && human === 'scissors') {
+            computerScore++;
+            roundNumber++;
+        }
+        
+        console.log(`Human Score: ${humanScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        console.log(`Round: ${roundNumber}`);
     }
-    if (cpu === 'scissors' && human === 'rock') {
-        computerScore++;
-    }
-    if (cpu === 'rock' && human === 'paper') {
-        humanScore++;
-    }
-    if (cpu === 'scissors' && human === 'paper') {
-        computerScore++;
-    }
-    if (cpu === 'paper' && human === 'scissors') {
-        humanScore++;
-    }
-    if (cpu === 'rock' && human === 'scissors') {
-        computerScore++;
-    }
-    
-    console.log(`Human Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Round: ${roundNumber}`);
 }
 
 
 const pSelection = 'scissors';
 const cSelection = computerPlay();
 
-console.log(playRound(pSelection, cSelection));
-game('scissors', 'paper');
+playRound(pSelection, cSelection);
+game(pSelection, cSelection);
