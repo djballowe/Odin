@@ -58,9 +58,10 @@ function game(human, cpu) {
     if (cpu === 'rock' && human === 'scissors') {
         computerScore++;
     }
-
-    console.log(humanScore)
-
+    
+    console.log(`Human Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+    console.log(`Round: ${roundNumber}`);
 }
 
 
@@ -68,4 +69,4 @@ const pSelection = 'scissors';
 const cSelection = computerPlay();
 
 console.log(playRound(pSelection, cSelection));
-console.log(game('scissors', 'paper'));
+game('scissors', 'paper');
