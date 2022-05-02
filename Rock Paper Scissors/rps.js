@@ -10,8 +10,7 @@ function game() {
         }
         
         for (let i = 0; i < 5; i++) {
-                userPrompt();
-                const pSelection = user;
+                const pSelection = userPrompt();
                 let cSelection = computerPlay();
                 
                 function computerPlay() {
