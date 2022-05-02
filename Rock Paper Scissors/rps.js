@@ -2,11 +2,18 @@ function game() {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
+
+        function userPrompt() {
+                       
+                let user = prompt('Enter Choice', '');
+                return user; 
+        }
         
         for (let i = 0; i < 5; i++) {
-                const pSelection = 'scissors';
+                userPrompt();
+                const pSelection = user;
                 let cSelection = computerPlay();
-
+                
                 function computerPlay() {
                         let choice = ['paper', 'rock', 'scissors'];
                         let ans = Math.floor(Math.random()*choice.length);
@@ -70,6 +77,5 @@ function game() {
         
         
 }
-
 
 game();
