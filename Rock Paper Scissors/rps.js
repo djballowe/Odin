@@ -1,3 +1,9 @@
+let roundNumber = 0;
+let humanScore = 0;
+let computerScore = 0;
+
+
+
 function computerPlay() {
     let choice = ['paper', 'rock', 'scissors'];
     let ans = Math.floor(Math.random()*choice.length);
@@ -5,35 +11,55 @@ function computerPlay() {
     return value;
 }
 
-function playRound(human, cpu) {
+function playRound(pSelection, cSelection) {
     
-    if (cpu === 'paper' && human === 'scissors') {
-            return 'You Win! Scissors beats paper';
+    if (cSelection === 'paper' && pSelection === 'scissors') {
+        roundNumber++;
+        humanScore++;    
+        return 'You Win! Scissors beats paper';
+            
     }
-    if (cpu === 'rock' && human === 'scissors') {
-            return 'You Lose! Rock beats scissors';
+    if (cSelection === 'rock' && pSelection === 'scissors') {
+        roundNumber++;
+        computerScore++; 
+        return 'You Lose! Rock beats scissors';
     }
-    if (cpu === 'scissors' && human === 'scissors') {
-            return 'TIE';
+    if (cSelection === 'scissors' && pSelection === 'scissors') {
+            
+        return 'TIE';
     }
-    if (cpu === 'paper' && human === 'rock') {
-            return 'You Lose! Paper beats rock';
+    if (cSelection === 'paper' && pSelection === 'rock') {
+        roundNumber++;
+        computerScore++;    
+        return 'You Lose! Paper beats rock';
     }
-    if (cpu === 'rock' && human === 'rock') {
-            return 'TIE';
+    if (cSelection === 'rock' && pSelection === 'rock') {
+           
+        return 'TIE';
     }
-    if (cpu === 'scissors' && human === 'rock') {
-            return 'You Win! Rock beats scissors';
+    if (cSelection === 'scissors' && pSelection === 'rock') {
+        roundNumber++;
+        humanScore++;    
+        return 'You Win! Rock beats scissors';
     } 
-    if (cpu === 'paper' && human === 'paper') {
-            return 'TIE';
+    if (cSelection === 'paper' && pSelection === 'paper') {
+            
+        return 'TIE';
     }  
-    if (cpu === 'rock' && human === 'paper') {
-            return 'You Win! Paper beats rock';
+    if (cSelection === 'rock' && pSelection === 'paper') {
+        roundNumber++;
+        humanScore++;    
+        return 'You Win! Paper beats rock';
     }
-    if (cpu === 'scissors' && human === 'paper') {
-            return 'You Lose! Scissors beats paper';
+    if (cSelection === 'scissors' && pSelection === 'paper') {
+        roundNumber++;
+        computerScore++;    
+        return 'You Lose! Scissors beats paper';
     }
+    console.log(`Human Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+    console.log(`Round: ${roundNumber}`);
+
 }
 
 /*function userPrompt() {
@@ -45,53 +71,16 @@ function playRound(human, cpu) {
         }
 }
 */
-function game(human, cpu) {
-    let roundNumber = 0;
-    let humanScore = 0;
-    let computerScore = 0;
+function game() {
     for (let i = 0; i < 4; i++) {
-                game();
-                computerPlay();
-                console.log(playRound(pSelection, cSelection));
-                console.log(`Human Score: ${humanScore}`);
-                console.log(`Computer Score: ${computerScore}`);
-                console.log(`Round: ${roundNumber}`);    
+                playRound();
         } 
-        
-    
-        if (cpu === 'paper' && human === 'rock') {
-            humanScore++;
-            Round++;
-        }
-        if (cpu === 'scissors' && human === 'rock') {
-            computerScore++;
-            roundNumber++;
-        }
-        if (cpu === 'rock' && human === 'paper') {
-            humanScore++;
-            roundNumber++;
-        }
-        if (cpu === 'scissors' && human === 'paper') {
-            computerScore++;
-            roundNumber++;
-        }
-        if (cpu === 'paper' && human === 'scissors') {
-                humanScore++;
-                roundNumber++;
-        }
-        if (cpu === 'rock' && human === 'scissors') {
-                computerScore++;
-                roundNumber++;
-        }
-            
-        console.log(`Human Score: ${humanScore}`);
-        console.log(`Computer Score: ${computerScore}`);
-        console.log(`Round: ${roundNumber}`);
+        console.log(playRound());
 }
 
 
 const pSelection = 'scissors';
-const cSelection = computerPlay();
+let cSelection = computerPlay();
 
-//playRound(pSelection, cSelection);
+playRound(pSelection, cSelection);
 game();
