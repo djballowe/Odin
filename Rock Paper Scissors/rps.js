@@ -72,15 +72,16 @@ function playRound(pSelection, cSelection) {
 }
 */
 function game() {
-    for (let i = 0; i < 4; i++) {
-                return playRound(pSelection, cSelection);
-        } 
-        console.log(playRound(pSelection, cSelection));
+let computerChoices = computerPlay();  
+        for (let i = 0; i < 4; i++) {
+                computerPlay();
+        }
+        return computerChoices;
+        
 }
 
 
 const pSelection = 'scissors';
 let cSelection = computerPlay();
 
-playRound(pSelection, cSelection);
-game();
+console.log(game());
