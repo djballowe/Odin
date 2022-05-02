@@ -4,13 +4,13 @@ function game() {
         let computerScore = 0;
 
         function userPrompt() {
-                let user = prompt('Enter Choice', '');
+                let user = prompt('Enter Choice');
                 let lUser = user.toLowerCase();
-                if (lUser != 'paper' || lUser != 'rock' || lUser != 'scissors') {
-                        alert('Invalid Entry Please Choose Rock, Paper, or Scissors');
-                        return false;
-                } else {
-                        return lUser; 
+                if (lUser !== 'paper' || lUser !== 'rock' || lUser !== 'scissors') {
+                        alert(`Invalid entry. You entered ${lUser}.`);
+                        return userPrompt();
+                } else if (lUser === 'paper' || lUser === 'rock' || lUser === 'scissors') {
+                        return user; 
                 }
                 
         }
