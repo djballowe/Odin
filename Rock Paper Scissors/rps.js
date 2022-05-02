@@ -4,9 +4,15 @@ function game() {
         let computerScore = 0;
 
         function userPrompt() {
-                       
                 let user = prompt('Enter Choice', '');
-                return user; 
+                let lUser = user.toLowerCase();
+                if (lUser != 'paper' || lUser != 'rock' || lUser != 'scissors') {
+                        alert('Invalid Entry Please Choose Rock, Paper, or Scissors');
+                        return false;
+                } else {
+                        return lUser; 
+                }
+                
         }
         
         for (let i = 0; i < 5; i++) {
