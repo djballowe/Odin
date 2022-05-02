@@ -6,11 +6,11 @@ function game() {
         function userPrompt() {
                 let user = prompt('Enter Choice');
                 let lUser = user.toLowerCase();
-                if (lUser !== 'paper' || lUser !== 'rock' || lUser !== 'scissors') {
+                if (lUser === 'paper' || lUser === 'rock' || lUser === 'scissors') {
+                        return lUser;
+                } else {
                         alert(`Invalid entry. You entered ${lUser}.`);
                         return userPrompt();
-                } else if (lUser === 'paper' || lUser === 'rock' || lUser === 'scissors') {
-                        return user; 
                 }
                 
         }
