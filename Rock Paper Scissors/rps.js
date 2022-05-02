@@ -73,9 +73,9 @@ function playRound(pSelection, cSelection) {
 */
 function game() {
     for (let i = 0; i < 4; i++) {
-                playRound();
+                return playRound(pSelection, cSelection);
         } 
-        console.log(playRound());
+        console.log(playRound(pSelection, cSelection));
 }
 
 
