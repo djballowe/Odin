@@ -21,3 +21,16 @@ div.style.backgroundColor = 'pink';
 
 container.appendChild(div);
 
+const divContainer = document.querySelector('.content');
+
+const text = document.createElement('h1');
+text.textContent = 'Im in a div!'
+
+divContainer.appendChild(text);
+
+const pText = document.createElement('p');
+pText.textContent = 'ME TOO!';
+
+divContainer.appendChild(pText);
+
+
