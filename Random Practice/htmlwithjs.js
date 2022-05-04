@@ -1,3 +1,11 @@
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+
 const container = document.querySelector('#container');
 
 const red = document.createElement('p');
@@ -32,5 +40,7 @@ const pText = document.createElement('p');
 pText.textContent = 'ME TOO!';
 
 divContainer.appendChild(pText);
+
+
 
 
