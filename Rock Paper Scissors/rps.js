@@ -1,5 +1,5 @@
 
-const btn = document.querySelector('.human');
+const btn = select.querySelectorAll('.humanButton');
 btn.onclick = () => game();
 
 
