@@ -10,7 +10,7 @@ body {
 
 .whole-wrapper {
     margin-inline: auto;
-    width: min(90%, 70.5rem);
+    width: min(90%, 60rem);
     display: flex;
     flex-direction: column;
 }
@@ -30,14 +30,20 @@ body {
 
 .human-computer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.text {
+    text-align: center;
 }
 
 .weapons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rock {
+    padding: 1rem;
 }
 
