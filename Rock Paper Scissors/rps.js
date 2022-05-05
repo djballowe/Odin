@@ -1,14 +1,15 @@
 
-// const btn = document.querySelector('.human');
+// const btn = document.querySelector('.Bhuman');
 // btn.onclick = () => game();
 
-document.getElementsByClassName("Bhuman").onclick = function() {playerChoice()};
+const button = document.getElementById('humanButton');
 
-function playerChoice() {
-        document.getElementsByClassName("paper").classList.toggle("show");
+button.onclick = function userChoice() {
+        if (button.className === 'paper') {
+                pSelection = 'paper';
+                return pSelection
+        }
 }
-
-        
 
 
 
@@ -18,7 +19,7 @@ function game() {
         let computerScore = 0;
 
         
-                const pSelection = 'paper';
+                const pSelection = userChoice();
                 let cSelection = computerPlay();
                 
                 function computerPlay() {
