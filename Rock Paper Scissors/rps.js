@@ -1,9 +1,15 @@
+
+const btn = document.querySelector('.human');
+btn.onclick = () => alert('Success');
+        
+
+
+
 function game() {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
 
-        
         
                 const pSelection = 'paper';
                 let cSelection = computerPlay();
