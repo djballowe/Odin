@@ -19,6 +19,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color: white;
 
 }
 
@@ -26,6 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .human-computer-container {
@@ -43,7 +46,25 @@ body {
     justify-content: space-between;
 }
 
-.rock {
+.rock,
+.paper,
+.scissors {
     padding: 1rem;
+    border: 1px solid black;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.score-compare {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
