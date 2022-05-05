@@ -2,22 +2,26 @@
 //const btn = document.querySelector('.human');
 //btn.onclick = () => game();
 
+const button = document.getElementById('humanButton');
+
 let pSelection = userChoice();
 let cSelection = computerPlay();
 
 
-const button = document.getElementById('humanButton');
-
-
 function userChoice() {
-        button.onclick = function () {
-                if (button.className === 'paper') {
-                        pSelection = 'paper';
-                        return pSelection;
-                }
+        if (button.className === 'paper') {
+                user = 'paper';
+                return user;
+        }
+        if (button.className === 'rock') {
+                user = 'rock';
+                return user;
+        }
+        if (button.className === 'scissors') {
+                user = 'scissors';
+                return user;
         }
 }
-
 
 
 function computerPlay() {
