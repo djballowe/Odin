@@ -1,6 +1,6 @@
 
 const btn = document.querySelector('.human');
-btn.onclick = () => alert('Success');
+btn.onclick = () => game();
         
 
 
@@ -75,5 +75,3 @@ function game() {
                 console.log(`Round: ${roundNumber}`);
         
 }
-
-game();
