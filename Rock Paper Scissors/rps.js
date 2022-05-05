@@ -2,11 +2,12 @@
 //const btn = document.querySelector('.human');
 //btn.onclick = () => game();
 
-let pSelection = 'Click';
+let pSelection = userChoice();
 let cSelection = computerPlay();
 
 
 const button = document.getElementById('humanButton');
+
 
 function userChoice() {
         button.onclick = function () {
