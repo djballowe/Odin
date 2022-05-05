@@ -6,17 +6,17 @@ const button = document.getElementsByClassName('humanButton');
 
 function userChoice() {
         
-        if (button.className === 'paper') {
+        if (button.id === 'paper') {
                 user = 'paper';
                 console.log('paper');
                 return user;
         }
-        if (button.className === 'rock') {
+        if (button.id === 'rock') {
                 user = 'rock';
                 console.log('rock');
                 return user;
         }
-        if (button.className === 'scissors') {
+        if (button.id === 'scissors') {
                 user = 'scissors';
                 console.log('scissors');
                 return user;
