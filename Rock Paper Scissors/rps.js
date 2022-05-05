@@ -1,26 +1,24 @@
 
-//const btn = document.querySelector('.human');
-//btn.onclick = () => game();
+const btn = document.querySelector('.human');
+btn.onclick = () => game();
 
-const button = document.getElementsByClassName('humanButton');
 
 function userChoice() {
-        
-        if (button.id === 'paper') {
-                user = 'paper';
-                console.log('paper');
-                return user;
-        }
-        if (button.id === 'rock') {
-                user = 'rock';
-                console.log('rock');
-                return user;
-        }
-        if (button.id === 'scissors') {
-                user = 'scissors';
-                console.log('scissors');
-                return user;
-        }
+        user = 'paper';
+        console.log('paper')
+        return user;
+}
+
+function userRock() {
+        user = 'rock';
+        console.log('rock');
+        return user;
+}
+
+function userScissors() {
+        user = 'scissors';
+        console.log('scissors');
+        return user;
 }
 
 
