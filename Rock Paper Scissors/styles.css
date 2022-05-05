@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: 'Press Start 2P', cursive;
-    background-color: #a7c7c9;
+    background-color: #9ea3a3;
 }
 
 .whole-wrapper {
@@ -58,7 +58,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 3rem 0;
+    
+}
+
+.score-header {
+    margin: .3rem 0;
 }
 
 .score-compare {
@@ -67,4 +72,11 @@ body {
     align-items: center;
     padding: 0 1rem;
 }
+
+.numbers {
+    padding: 0 .1rem;
+    margin: .3rem 0;
+}
+
+
 
