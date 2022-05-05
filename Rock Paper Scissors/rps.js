@@ -4,21 +4,20 @@
 
 const button = document.getElementById('humanButton');
 
-let pSelection = userChoice();
-let cSelection = computerPlay();
-
-
 function userChoice() {
         if (button.className === 'paper') {
                 user = 'paper';
+                console.log('paper');
                 return user;
         }
         if (button.className === 'rock') {
                 user = 'rock';
+                console.log('rock');
                 return user;
         }
         if (button.className === 'scissors') {
                 user = 'scissors';
+                console.log('scissors');
                 return user;
         }
 }
@@ -27,10 +26,12 @@ function userChoice() {
 function computerPlay() {
         let choice = ['paper', 'rock', 'scissors'];
         let ans = Math.floor(Math.random()*choice.length);
-        let cSelection = choice[ans];
-        return cSelection;
+        let cpuChoice = choice[ans];
+        return cpuChoice;
 }
 
+let pSelection = user;
+let cSelection = cpuChoice;
 
 function game(pSelection, cSelection) {
         let roundNumber = 0;
