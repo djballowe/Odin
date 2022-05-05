@@ -1,0 +1,109 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #9ea3a3;
+}
+
+.whole-wrapper {
+    margin-inline: auto;
+    width: min(90%, 60rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.human-computer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.weapons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rock,
+.paper,
+.scissors {
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 0 .7rem;
+    cursor: pointer;
+}
+
+
+.scissors:hover {
+    color: white;
+    background-color: black;
+}
+
+.paper:hover {
+    color: white;
+    background-color: black;
+}
+
+.rock:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    
+}
+
+
+.score-header {
+    margin: .7rem 0 0 0;
+}
+
+.score-compare {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.numbers {
+    padding: 0 .1rem;
+    margin: .3rem 0;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

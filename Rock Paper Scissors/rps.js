@@ -1,30 +1,39 @@
-function game() {
+
+//const btn = document.querySelector('.human');
+//btn.onclick = () => game();
+
+let pSelection = userChoice();
+let cSelection = computerPlay();
+
+
+const button = document.getElementById('humanButton');
+
+
+function userChoice() {
+        button.onclick = function () {
+                if (button.className === 'paper') {
+                        pSelection = 'paper';
+                        return pSelection;
+                }
+        }
+}
+
+
+
+function computerPlay() {
+        let choice = ['paper', 'rock', 'scissors'];
+        let ans = Math.floor(Math.random()*choice.length);
+        let cSelection = choice[ans];
+        return cSelection;
+}
+
+
+function game(pSelection, cSelection) {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
 
-        function userPrompt() {
-                let user = prompt('Enter Choice');
-                let lUser = user.toLowerCase();
-                if (lUser === 'paper' || lUser === 'rock' || lUser === 'scissors') {
-                        return lUser;
-                } else {
-                        alert(`Invalid entry. You entered ${lUser}.`);
-                        return userPrompt();
-                }
-                
-        }
         
-        for (let i = 0; i < 5; i++) {
-                const pSelection = userPrompt();
-                let cSelection = computerPlay();
-                
-                function computerPlay() {
-                        let choice = ['paper', 'rock', 'scissors'];
-                        let ans = Math.floor(Math.random()*choice.length);
-                        let cSelection = choice[ans];
-                        return cSelection;
-                }
 
                 const playRound = (pSelection, cSelection) => {
                 
@@ -78,9 +87,5 @@ function game() {
                 console.log(`Human Score: ${humanScore}`);
                 console.log(`Computer Score: ${computerScore}`);
                 console.log(`Round: ${roundNumber}`);
-        }
-        
         
 }
-
-game();
