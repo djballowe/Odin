@@ -1,6 +1,13 @@
 
-const btn = document.querySelector('.human');
-btn.onclick = () => game();
+// const btn = document.querySelector('.human');
+// btn.onclick = () => game();
+
+document.getElementsByClassName("Bhuman").onclick = function() {playerChoice()};
+
+function playerChoice() {
+        document.getElementsByClassName("paper").classList.toggle("show");
+}
+
         
 
 
