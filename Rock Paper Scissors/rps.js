@@ -2,16 +2,18 @@
 //const btn = document.querySelector('.human');
 //btn.onclick = () => game();
 
-let pSelection = userChoice();
+let pSelection = 'Click';
 let cSelection = computerPlay();
 
 
 const button = document.getElementById('humanButton');
 
 function userChoice() {
-        if (button.className === 'paper') {
-                pSelection = 'paper';
-                return pSelection;      
+        button.onclick = function () {
+                if (button.className === 'paper') {
+                        pSelection = 'paper';
+                        return pSelection;
+                }
         }
 }
 
