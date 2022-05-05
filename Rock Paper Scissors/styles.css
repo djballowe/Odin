@@ -51,19 +51,40 @@ body {
 .scissors {
     padding: 1rem;
     border: 1px solid black;
+    margin: 0 .7rem;
+    cursor: pointer;
 }
+
+
+.scissors:hover {
+    color: white;
+    background-color: black;
+}
+
+.paper:hover {
+    color: white;
+    background-color: black;
+}
+
+.rock:hover {
+    color: white;
+    background-color: black;
+}
+
+
 
 .score {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0;
+    margin: 3rem;
     
 }
 
+
 .score-header {
-    margin: .3rem 0;
+    margin: .7rem 0 0 0;
 }
 
 .score-compare {
@@ -76,6 +97,12 @@ body {
 .numbers {
     padding: 0 .1rem;
     margin: .3rem 0;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
