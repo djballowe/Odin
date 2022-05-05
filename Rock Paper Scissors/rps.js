@@ -1,33 +1,36 @@
 
-// const btn = document.querySelector('.Bhuman');
-// btn.onclick = () => game();
+//const btn = document.querySelector('.human');
+//btn.onclick = () => game();
+
+let pSelection = userChoice();
+let cSelection = computerPlay();
+
 
 const button = document.getElementById('humanButton');
 
-button.onclick = function userChoice() {
+function userChoice() {
         if (button.className === 'paper') {
                 pSelection = 'paper';
-                return pSelection
+                return pSelection;      
         }
 }
 
 
 
-function game() {
+function computerPlay() {
+        let choice = ['paper', 'rock', 'scissors'];
+        let ans = Math.floor(Math.random()*choice.length);
+        let cSelection = choice[ans];
+        return cSelection;
+}
+
+
+function game(pSelection, cSelection) {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
 
         
-                const pSelection = userChoice();
-                let cSelection = computerPlay();
-                
-                function computerPlay() {
-                        let choice = ['paper', 'rock', 'scissors'];
-                        let ans = Math.floor(Math.random()*choice.length);
-                        let cSelection = choice[ans];
-                        return cSelection;
-                }
 
                 const playRound = (pSelection, cSelection) => {
                 
