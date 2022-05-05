@@ -2,9 +2,10 @@
 //const btn = document.querySelector('.human');
 //btn.onclick = () => game();
 
-const button = document.getElementById('humanButton');
+const button = document.getElementsByClassName('humanButton');
 
 function userChoice() {
+        
         if (button.className === 'paper') {
                 user = 'paper';
                 console.log('paper');
