@@ -105,5 +105,29 @@ body {
     display: none;
 }
 
+.tryAgain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playAgain {
+    display: none;
+}
+
+
+
+
+
+.test {
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 0 .7rem;
+    cursor: pointer;
+    background-color: #9ea3a3;
+    font-family: 'Press Start 2P';
+}
+
+
 
 

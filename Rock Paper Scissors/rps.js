@@ -56,9 +56,11 @@ function playRound(pSelection) {
         
         if (computerScore === 5) {
                 lose.style.display = 'flex';
+                disablePage();
         }
         if (humanScore === 5) {
                 status.style.display = 'flex';
+                disablePage();
         }
         console.log(`human score ${humanScore}`);
         console.log(`computer score ${computerScore}`);
@@ -76,6 +78,12 @@ buttons.forEach((button) => {
 });
 
 
+const hover = document.getElementsByClassName('humanButton');
 
+function disablePage () {
+        buttons.disabled = true;
+        hover.classList.add('test');
+
+}
 
 
