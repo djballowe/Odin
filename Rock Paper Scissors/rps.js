@@ -4,10 +4,17 @@ function game() {
         let computerScore = 0;
 
         
-        
-        const pSelection = userPrompt();
+        let pSelection = userChoice();
         let cSelection = computerPlay();
-                
+        const button = document.querySelectorAll(".humanButton");
+        
+        function userChoice() {
+                if (button.id === 'paper') {
+                        console.log('ah shit here we go again')
+                }
+        }
+        
+        
         function computerPlay() {
                 let choice = ['paper', 'rock', 'scissors'];
                 let ans = Math.floor(Math.random()*choice.length);
@@ -15,7 +22,7 @@ function game() {
                 return cSelection;
         }
 
-        const playRound = (pSelection, cSelection) => {
+        function playRound(pSelection, cSelection) {
                 
                 if (cSelection === 'paper' && pSelection === 'scissors') {
                         roundNumber++;
@@ -64,5 +71,3 @@ function game() {
         }
         
 }
-
-game();
