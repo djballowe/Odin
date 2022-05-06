@@ -37,10 +37,8 @@ function computerPlay() {
 
 function playRound(pSelection) {
         let cSelection = computerPlay();
-<<<<<<< HEAD
-=======
-        
->>>>>>> d93fdc8 (counter working properly)
+
+
         const status = document.getElementById('win');
         const lose = document.getElementById('lose'); 
         
@@ -48,7 +46,7 @@ function playRound(pSelection) {
         if (pSelection === 'rock' && cSelection === 'scissors' ||
         pSelection === 'scissors' && cSelection === 'paper' ||
         pSelection === 'paper' && cSelection === 'rock') {
-<<<<<<< HEAD
+
 
                 humanScore += 1;
 
@@ -57,10 +55,7 @@ function playRound(pSelection) {
                         status.style.display = 'flex';
                         
                 }
-=======
-                humanScore += 1;
-        
->>>>>>> d93fdc8 (counter working properly)
+
         } else if (pSelection === cSelection) {
                 tie ++;
         
@@ -73,15 +68,7 @@ function playRound(pSelection) {
                 }
         }
         
-<<<<<<< HEAD
-=======
-        if (computerScore === 5) {
-                lose.style.display = 'flex';
-        }
-        if (humanScore === 5) {
-                status.style.display = 'flex';
-        }
->>>>>>> d93fdc8 (counter working properly)
+
         console.log(`human score ${humanScore}`);
         console.log(`computer score ${computerScore}`);
         console.log(`player selection ${pSelection}`);
