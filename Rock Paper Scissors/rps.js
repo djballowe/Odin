@@ -38,8 +38,13 @@ function computerPlay() {
 function playRound(pSelection) {
         let cSelection = computerPlay();
         
+<<<<<<< HEAD
         const status = document.getElementById('win');
         const lose = document.getElementById('lose'); 
+=======
+        let cSelection = computerPlay();
+        console.log(humanScore);
+>>>>>>> e4fd158 (it actually might be working)
         
         
         if (pSelection === 'rock' && cSelection === 'scissors' ||
@@ -62,6 +67,7 @@ function playRound(pSelection) {
                         
                 }
         }
+<<<<<<< HEAD
         
         console.log(`human score ${humanScore}`);
         console.log(`computer score ${computerScore}`);
@@ -90,4 +96,53 @@ function disablePage () {
 }
 
 */
+=======
+        if (cSelection === 'rock' && pSelection === 'scissors') {
+                roundNumber++;
+                computerScore++; 
+                return 'You Lose! Rock beats scissors';
+        }
+        if (cSelection === 'scissors' && pSelection === 'scissors') {
+                roundNumber++;
+                return 'TIE';
+        }
+        if (cSelection === 'paper' && pSelection === 'rock') {
+                roundNumber++;
+                computerScore++;    
+                return 'You Lose! Paper beats rock';
+        }
+        if (cSelection === 'rock' && pSelection === 'rock') {
+                roundNumber++;
+                return 'TIE';
+        }
+        if (cSelection === 'scissors' && pSelection === 'rock') {
+                roundNumber++;
+                humanScore++;    
+                return 'You Win! Rock beats scissors';
+        } 
+        if (cSelection === 'paper' && pSelection === 'paper') {
+                return 'TIE';
+        }  
+        if (cSelection === 'rock' && pSelection === 'paper') {
+                roundNumber++;
+                humanScore++;    
+                return 'You Win! Paper beats rock';
+        }
+        if (cSelection === 'scissors' && pSelection === 'paper') {
+                roundNumber++;
+                computerScore++;    
+                return 'You Lose! Scissors beats paper';
+        }     
+
+}
+
+buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+                playRound(button.id);
+        });
+});
+
+
+
+>>>>>>> e4fd158 (it actually might be working)
 
