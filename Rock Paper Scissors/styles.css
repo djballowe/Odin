@@ -61,6 +61,7 @@ body {
     background-color: black;
 }
 
+
 .score {
     display: flex;
     flex-direction: column;

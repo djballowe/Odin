@@ -1,5 +1,4 @@
 
-
  /* function userChoice() {
         const paper = document.getElementById("paper");
         const rock = document.getElementById("rock");
@@ -96,5 +95,6 @@ function disablePage () {
 }
 
 */
+
 
 

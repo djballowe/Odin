@@ -1,2 +1,2 @@
 # Odin
-Odin project using git with linux tutorial
+Repo for housing all small projects and practice related to the Odin project.
