@@ -1,24 +1,15 @@
-
-//const btn = document.querySelector('.human');
-//btn.onclick = () => game();
-
-const button = document.getElementsByClassName('humanButton');
-
 function userChoice() {
         user = 'paper';
-        console.log('paper')
         return user;
 }
 
 function userRock() {
         user = 'rock';
-        console.log('rock');
         return user;
 }
 
 function userScissors() {
         user = 'scissors';
-        console.log('scissors');
         return user;
 }
 
@@ -30,17 +21,18 @@ function computerPlay() {
         return cpuChoice;
 }
 
-let pSelection = user;
-let cSelection = cpuChoice;
+const btn = document.querySelector('.human');
+btn.onclick = () => game();
 
-function game(pSelection, cSelection) {
+
+
+function game() {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
-
         
 
-                const playRound = (pSelection, cSelection) => {
+                const playRound = (userChoice(), computerPlay()) => {
                 
                         if (cSelection === 'paper' && pSelection === 'scissors') {
                                 roundNumber++;
@@ -88,9 +80,8 @@ function game(pSelection, cSelection) {
                 
 
                 }
-                console.log(playRound(pSelection, cSelection));
-                console.log(`Human Score: ${humanScore}`);
-                console.log(`Computer Score: ${computerScore}`);
-                console.log(`Round: ${roundNumber}`);
-        
+        console.log(pSelection);
+        console.log(`Human Score: ${humanScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        console.log(`Round: ${roundNumber}`);
 }
