@@ -37,20 +37,19 @@ function computerPlay() {
 
 function playRound(pSelection) {
         let cSelection = computerPlay();
-        console.log(humanScore);
-        console.log(computerScore);
+        
         const status = document.getElementById('win');
         const lose = document.getElementById('lose'); 
-        hScore.textContent = `${humanScore}`;
-        cScore.textContent = `${computerScore}`;
         
         
         if (pSelection === 'rock' && cSelection === 'scissors' ||
         pSelection === 'scissors' && cSelection === 'paper' ||
         pSelection === 'paper' && cSelection === 'rock') {
-                humanScore ++;
+                humanScore += 1;
+        
         } else if (pSelection === cSelection) {
                 tie ++;
+        
         } else {
                 computerScore++;
         }
@@ -61,7 +60,13 @@ function playRound(pSelection) {
         if (humanScore === 5) {
                 status.style.display = 'flex';
         }
+        console.log(`human score ${humanScore}`);
+        console.log(`computer score ${computerScore}`);
+        console.log(`player selection ${pSelection}`);
+        console.log(`computer selection ${cSelection}`);
 
+        hScore.textContent = `${humanScore}`;
+        cScore.textContent = `${computerScore}`;
 }
 
 buttons.forEach((button) => {
