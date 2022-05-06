@@ -47,6 +47,7 @@ function playRound(pSelection) {
         pSelection === 'paper' && cSelection === 'rock') {
                 humanScore += 1;
 
+
                 if (humanScore === 5) {
                         status.style.display = 'flex';
                         
