@@ -36,51 +36,27 @@ function computerPlay() {
 }
 
 function playRound(pSelection) {
+        const status = document.getElementById('win');
+        const lose = document.getElementById('lose'); 
         hScore.textContent = `${humanScore}`;
         cScore.textContent = `${computerScore}`;
+        
         let cSelection = computerPlay();
         
-        if (cSelection === 'paper' && pSelection === 'scissors') {
-                roundNumber++;
-                humanScore++;    
-                return 'You Win! Scissors beats paper';
-                                
-        }
-        if (cSelection === 'rock' && pSelection === 'scissors') {
-                roundNumber++;
-                computerScore++; 
-                return 'You Lose! Rock beats scissors';
-        }
-        if (cSelection === 'scissors' && pSelection === 'scissors') {
-                roundNumber++;
-                return 'TIE';
-        }
-        if (cSelection === 'paper' && pSelection === 'rock') {
-                roundNumber++;
-                computerScore++;    
-                return 'You Lose! Paper beats rock';
-        }
-        if (cSelection === 'rock' && pSelection === 'rock') {
-                roundNumber++;
-                return 'TIE';
-        }
-        if (cSelection === 'scissors' && pSelection === 'rock') {
-                roundNumber++;
-                humanScore++;    
-                return 'You Win! Rock beats scissors';
-        } 
-        if (cSelection === 'paper' && pSelection === 'paper') {
-                return 'TIE';
-        }  
-        if (cSelection === 'rock' && pSelection === 'paper') {
-                roundNumber++;
-                humanScore++;    
-                return 'You Win! Paper beats rock';
-        }
-        if (cSelection === 'scissors' && pSelection === 'paper') {
-                roundNumber++;
-                computerScore++;    
-                return 'You Lose! Scissors beats paper';
+        if (pSelection === 'rock' && cSelection === 'scissors' ||
+        pSelection === 'scissors' && cSelection === 'paper' ||
+        pSelection === 'paper' && cSelection === 'rock') {
+                humanScore ++;
+        
+                if (humanScore === 5) {
+                     status.style.display = 'flex';   
+                }
+        } else {
+                computerScore ++;
+
+                if (computerScore === 5) {
+                        lose.style.display = 'flex'
+                }
         }     
 
 }
