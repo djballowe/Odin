@@ -46,9 +46,7 @@ body {
     justify-content: space-between;
 }
 
-.rock,
-.paper,
-.scissors {
+.humanButton {
     padding: 1rem;
     border: 1px solid black;
     margin: 0 .7rem;
@@ -56,22 +54,10 @@ body {
 }
 
 
-.scissors:hover {
+.humanButton:hover {
     color: white;
     background-color: black;
 }
-
-.paper:hover {
-    color: white;
-    background-color: black;
-}
-
-.rock:hover {
-    color: white;
-    background-color: black;
-}
-
-
 
 .score {
     display: flex;

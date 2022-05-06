@@ -1,16 +1,46 @@
-function game() {
+
+
+ /* function userChoice() {
+        const paper = document.getElementById("paper");
+        const rock = document.getElementById("rock");
+        const scissors = document.getElementById("scissors");
+        paper.stopPropagation;
+
+        if (paper.click == 'humanButton') {
+                console.log('paper')
+        } 
+        if (rock.className == 'humanButton') {
+                console.log('rock');
+        } 
+        if (scissors.className == 'humanButton') {
+                console.log('scissors');
+        }
+       
+}
+*/
+
+document.getElementById('paper').addEventListener('click', function() {
+        pSelection = 'paper';
+});
+
+document.getElementById('rock').addEventListener('click', function() {
+        pSelection = 'rock';
+});
+
+document.getElementById('scissors').addEventListener('click', function() {
+        pSelection = 'scissors';
+});
+
+function game(pSelection, cSelection) {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
 
-        
-        let pSelection = userChoice();
-        let cSelection = computerPlay();
         const button = document.querySelectorAll(".humanButton");
         
         function userChoice() {
                 if (button.id === 'paper') {
-                        console.log('ah shit here we go again')
+                        console.log('ah shit here we go again');
                 }
         }
         
