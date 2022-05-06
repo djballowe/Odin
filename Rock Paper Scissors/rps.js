@@ -36,7 +36,8 @@ function computerPlay() {
 
 function playRound(pSelection) {
         
-        cSelection = computerPlay();
+        let cSelection = computerPlay();
+        console.log(humanScore);
         
         if (cSelection === 'paper' && pSelection === 'scissors') {
                 roundNumber++;
@@ -79,7 +80,16 @@ function playRound(pSelection) {
                 roundNumber++;
                 computerScore++;    
                 return 'You Lose! Scissors beats paper';
-        }
-                
+        }     
 
 }
+
+buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+                playRound(button.id);
+        });
+});
+
+
+
+
