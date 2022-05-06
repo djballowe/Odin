@@ -51,7 +51,6 @@ function playRound(pSelection) {
                         status.style.display = 'flex';
                         
                 }
-        
         } else if (pSelection === cSelection) {
                 tie ++;
         
@@ -81,6 +80,8 @@ buttons.forEach((button) => {
 
 
 const hover = document.getElementsByClassName('humanButton');
+
+
 /*
 function disablePage () {
         buttons.disabled = true;
