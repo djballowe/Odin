@@ -46,22 +46,24 @@ function playRound(pSelection) {
         pSelection === 'scissors' && cSelection === 'paper' ||
         pSelection === 'paper' && cSelection === 'rock') {
                 humanScore += 1;
+
+                if (humanScore === 5) {
+                        status.style.display = 'flex';
+                        
+                }
         
         } else if (pSelection === cSelection) {
                 tie ++;
         
         } else {
                 computerScore++;
+
+                if (computerScore === 5) {
+                        lose.style.display = 'flex';
+                        
+                }
         }
         
-        if (computerScore === 5) {
-                lose.style.display = 'flex';
-                disablePage();
-        }
-        if (humanScore === 5) {
-                status.style.display = 'flex';
-                disablePage();
-        }
         console.log(`human score ${humanScore}`);
         console.log(`computer score ${computerScore}`);
         console.log(`player selection ${pSelection}`);
@@ -79,11 +81,13 @@ buttons.forEach((button) => {
 
 
 const hover = document.getElementsByClassName('humanButton');
-
+/*
 function disablePage () {
         buttons.disabled = true;
         hover.classList.add('test');
 
 }
+
+*/
 
 
