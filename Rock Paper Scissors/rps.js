@@ -25,7 +25,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 const buttons = document.querySelectorAll('button');
-        
+const hScore = document.getElementById('humanScore');
+const cScore = document.getElementById('computerScore');       
         
 function computerPlay() {
         let choice = ['paper', 'rock', 'scissors'];
@@ -35,9 +36,9 @@ function computerPlay() {
 }
 
 function playRound(pSelection) {
-        
+        hScore.textContent = `${humanScore}`;
+        cScore.textContent = `${computerScore}`;
         let cSelection = computerPlay();
-        console.log(humanScore);
         
         if (cSelection === 'paper' && pSelection === 'scissors') {
                 roundNumber++;
@@ -89,6 +90,7 @@ buttons.forEach((button) => {
                 playRound(button.id);
         });
 });
+
 
 
 
