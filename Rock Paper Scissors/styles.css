@@ -88,9 +88,21 @@ body {
 }
 
 .status {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#win {
+    display: none;
+}
+
+#lose {
+    display: none;
+}
+
+#tie {
+    display: none;
 }
 
 

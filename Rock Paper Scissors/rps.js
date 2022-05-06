@@ -19,7 +19,7 @@
 }
 */      
 
-
+let tie = 0;
 let roundNumber = 0;
 let humanScore = 0;
 let computerScore = 0;
@@ -36,28 +36,31 @@ function computerPlay() {
 }
 
 function playRound(pSelection) {
+        let cSelection = computerPlay();
+        console.log(humanScore);
+        console.log(computerScore);
         const status = document.getElementById('win');
         const lose = document.getElementById('lose'); 
         hScore.textContent = `${humanScore}`;
         cScore.textContent = `${computerScore}`;
         
-        let cSelection = computerPlay();
         
         if (pSelection === 'rock' && cSelection === 'scissors' ||
         pSelection === 'scissors' && cSelection === 'paper' ||
         pSelection === 'paper' && cSelection === 'rock') {
                 humanScore ++;
-        
-                if (humanScore === 5) {
-                     status.style.display = 'flex';   
-                }
+        } else if (pSelection === cSelection) {
+                tie ++;
         } else {
-                computerScore ++;
-
-                if (computerScore === 5) {
-                        lose.style.display = 'flex'
-                }
-        }     
+                computerScore++;
+        }
+        
+        if (computerScore === 5) {
+                lose.style.display = 'flex';
+        }
+        if (humanScore === 5) {
+                status.style.display = 'flex';
+        }
 
 }
 
