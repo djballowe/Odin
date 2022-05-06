@@ -19,24 +19,29 @@
 }
 */
 
-document.getElementById('paper').addEventListener('click', function() {
-        pSelection = 'paper';
-});
 
-document.getElementById('rock').addEventListener('click', function() {
-        pSelection = 'rock';
-});
+        const player = document.getElementById('paper').addEventListener('click', function() {
+                pSelection = 'paper';
+        });
+        
+        document.getElementById('rock').addEventListener('click', function() {
+                pSelection = 'rock';
+        });
+        
+        document.getElementById('scissors').addEventListener('click', function() {
+                pSelection = 'scissors';
+        });
 
-document.getElementById('scissors').addEventListener('click', function() {
-        pSelection = 'scissors';
-});
+        function test() {
+                console.log(player);
+        }
+        
 
 function game(pSelection, cSelection) {
         let roundNumber = 0;
         let humanScore = 0;
         let computerScore = 0;
 
-        const button = document.querySelectorAll(".humanButton");
         
         function userChoice() {
                 if (button.id === 'paper') {
