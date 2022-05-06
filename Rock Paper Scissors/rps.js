@@ -37,7 +37,6 @@ function computerPlay() {
 
 function playRound(pSelection) {
         let cSelection = computerPlay();
-        
         const status = document.getElementById('win');
         const lose = document.getElementById('lose'); 
         
@@ -45,6 +44,7 @@ function playRound(pSelection) {
         if (pSelection === 'rock' && cSelection === 'scissors' ||
         pSelection === 'scissors' && cSelection === 'paper' ||
         pSelection === 'paper' && cSelection === 'rock') {
+
                 humanScore += 1;
 
 

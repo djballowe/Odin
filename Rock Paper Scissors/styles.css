@@ -88,7 +88,7 @@ body {
 }
 
 .status {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -105,6 +105,7 @@ body {
     display: none;
 }
 
+<<<<<<< HEAD
 .tryAgain {
     display: flex;
     justify-content: center;
@@ -129,5 +130,7 @@ body {
 }
 
 
+=======
+>>>>>>> 2f28bb0 (debugging score counters)
 
 
