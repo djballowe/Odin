@@ -1,7 +1,8 @@
 
-const btn = select.querySelectorAll('.humanButton');
-btn.onclick = () => game();
+//const btn = document.querySelector('.human');
+//btn.onclick = () => game();
 
+const button = document.getElementsByClassName('humanButton');
 
 function userChoice() {
         user = 'paper';
