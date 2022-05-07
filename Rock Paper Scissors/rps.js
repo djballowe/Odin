@@ -17,9 +17,21 @@ function disablePage () {
 
 
 function computerPlay() {
+        const computerButtons = document.querySelectorAll('.computerButton');
+        
         let choice = ['paper', 'rock', 'scissors'];
         let ans = Math.floor(Math.random()*choice.length);
         let cSelection = choice[ans];
+        if (cSelection === 'paper') {
+                document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+        }
+        if (cSelection === 'rock') {
+                document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+        }
+        if (cSelection === 'scissors') {
+                document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+        }
+        
         return cSelection;
 }
 
