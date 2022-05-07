@@ -11,9 +11,7 @@ const cScore = document.getElementById('computerScore');
         
 
 
-function disablePage () {
-        
-}
+
 
 
 function computerPlay() {
@@ -23,13 +21,35 @@ function computerPlay() {
         let ans = Math.floor(Math.random()*choice.length);
         let cSelection = choice[ans];
         if (cSelection === 'paper') {
-                document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                }
+                if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
+                }
         }
         if (cSelection === 'rock') {
-                document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
-        }
+                if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                }
+                if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
+                }
+        } 
         if (cSelection === 'scissors') {
-                document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                }
+                if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
+                }
+                
         }
         
         return cSelection;
