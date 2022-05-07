@@ -52,6 +52,7 @@ body {
     margin: 0 .7rem;
     cursor: pointer;
     background-color: #9ea3a3;
+    font-size: .8em;
     font-family: 'Press Start 2P';
 }
 
@@ -114,6 +115,18 @@ body {
 
 #playAgain {
     display: none;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #9ea3a3;
+    font-size: .8em;
+    font-family: 'Press Start 2P';
+}
+
+#playAgain:hover {
+    color: white;
+    background-color: black;
 }
 
 

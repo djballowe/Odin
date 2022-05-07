@@ -1,22 +1,4 @@
-
- /* function userChoice() {
-        const paper = document.getElementById("paper");
-        const rock = document.getElementById("rock");
-        const scissors = document.getElementById("scissors");
-        paper.stopPropagation;
-
-        if (paper.click == 'humanButton') {
-                console.log('paper')
-        } 
-        if (rock.className == 'humanButton') {
-                console.log('rock');
-        } 
-        if (scissors.className == 'humanButton') {
-                console.log('scissors');
-        }
-       
-}
-*/      
+     
 
 let tie = 0;
 let roundNumber = 0;
@@ -39,7 +21,8 @@ function playRound(pSelection) {
 
 
         const status = document.getElementById('win');
-        const lose = document.getElementById('lose'); 
+        const lose = document.getElementById('lose');
+        const playAgain = document.getElementById('playAgain'); 
         
         
         if (pSelection === 'rock' && cSelection === 'scissors' ||
@@ -52,7 +35,8 @@ function playRound(pSelection) {
 
                 if (humanScore === 5) {
                         status.style.display = 'flex';
-                        
+                        playAgain.style.display = 'flex';
+                        disablePage();
                 }
 
         } else if (pSelection === cSelection) {
@@ -63,7 +47,8 @@ function playRound(pSelection) {
 
                 if (computerScore === 5) {
                         lose.style.display = 'flex';
-                        
+                        playAgain.style.display = 'flex';
+                        disablePage();
                 }
         }
         
@@ -87,14 +72,12 @@ buttons.forEach((button) => {
 const hover = document.getElementsByClassName('humanButton');
 
 
-/*
+
 function disablePage () {
         buttons.disabled = true;
         hover.classList.add('test');
 
 }
-
-*/
 
 
 
