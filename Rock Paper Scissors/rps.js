@@ -9,6 +9,13 @@ const buttons = document.querySelectorAll('button');
 const hScore = document.getElementById('humanScore');
 const cScore = document.getElementById('computerScore');       
         
+
+
+function disablePage () {
+        buttons.disabled = true;
+}
+
+
 function computerPlay() {
         let choice = ['paper', 'rock', 'scissors'];
         let ans = Math.floor(Math.random()*choice.length);
@@ -67,17 +74,6 @@ buttons.forEach((button) => {
                 playRound(button.id);
         });
 });
-
-
-const hover = document.getElementsByClassName('humanButton');
-
-
-
-function disablePage () {
-        buttons.disabled = true;
-        hover.classList.add('test');
-
-}
 
 
 
