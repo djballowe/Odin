@@ -12,7 +12,7 @@ const cScore = document.getElementById('computerScore');
 
 
 function disablePage () {
-        buttons.disabled = true;
+        
 }
 
 
@@ -23,9 +23,9 @@ function computerPlay() {
         return cSelection;
 }
 
+
 function playRound(pSelection) {
         let cSelection = computerPlay();
-
 
         const status = document.getElementById('win');
         const lose = document.getElementById('lose');
@@ -41,9 +41,9 @@ function playRound(pSelection) {
 
 
                 if (humanScore === 5) {
+                        disablePage();
                         status.style.display = 'flex';
                         playAgain.style.display = 'flex';
-                        disablePage();
                 }
 
         } else if (pSelection === cSelection) {
@@ -53,9 +53,10 @@ function playRound(pSelection) {
                 computerScore++;
 
                 if (computerScore === 5) {
+                        disablePage();
                         lose.style.display = 'flex';
                         playAgain.style.display = 'flex';
-                        disablePage();
+                        
                 }
         }
         
@@ -71,7 +72,9 @@ function playRound(pSelection) {
 
 buttons.forEach((button) => {
         button.addEventListener('click', () => {
-                playRound(button.id);
+                if (humanScore < 5 && computerScore < 5){
+                        playRound(button.id);
+                }
         });
 });
 
