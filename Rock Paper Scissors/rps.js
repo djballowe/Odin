@@ -23,9 +23,11 @@ function computerPlay() {
         if (cSelection === 'paper') {
                 if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
                 }
                 if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
                 } else {
                         document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
                 }
@@ -33,9 +35,11 @@ function computerPlay() {
         if (cSelection === 'rock') {
                 if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
                 }
                 if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
                 } else {
                         document.getElementById('Crock').classList.add('computerButtonOnSelect');
                 }
@@ -43,9 +47,11 @@ function computerPlay() {
         if (cSelection === 'scissors') {
                 if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
                 }
                 if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
                         document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
                 } else {
                         document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
                 }
