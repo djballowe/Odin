@@ -79,7 +79,6 @@ function playRound(pSelection) {
 
 
                 if (humanScore === 5) {
-                        disablePage();
                         status.style.display = 'flex';
                         playAgain.style.display = 'flex';
                 }
@@ -91,18 +90,11 @@ function playRound(pSelection) {
                 computerScore++;
 
                 if (computerScore === 5) {
-                        disablePage();
                         lose.style.display = 'flex';
                         playAgain.style.display = 'flex';
                         
                 }
         }
-        
-
-        console.log(`human score ${humanScore}`);
-        console.log(`computer score ${computerScore}`);
-        console.log(`player selection ${pSelection}`);
-        console.log(`computer selection ${cSelection}`);
 
         hScore.textContent = `${humanScore}`;
         cScore.textContent = `${computerScore}`;
