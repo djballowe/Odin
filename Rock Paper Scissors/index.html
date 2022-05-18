@@ -22,19 +22,22 @@
             <div class="human">
                 <h2 class="text">Human</h2>
                 <div class="weapons">
-                    
-                    <div class="humanButton" id="paper" onclick="userChoice()">Paper</div>
-                    <div class="humanButton" id="rock" onclick="userRock()">Rock</div>
-                    <div class="humanButton" id="scissors" onclick="userScissors()">Scissors</div>
+
+                    <button class="humanButton" id="rock">Rock</button>
+                    <button class="humanButton" id="paper">Paper</button>
+                    <button class="humanButton" id="scissors">Scissors</button>
+
                 </div>
             </div>
         
             <div class="computer">
                 <h2 class="text">Computer</h2>
                 <div class="weapons">
-                    <div class="computerButton">Rock</div>
-                    <div class="computerButton">Paper</div>
-                    <div class="computerButton">Scissors</div>
+
+                    <div class="computerButton" id="Crock">Rock</div>
+                    <div class="computerButton" id="Cpaper">Paper</div>
+                    <div class="computerButton" id="Cscissors">Scissors</div>
+
                 </div>
             </div>
         </div>
@@ -44,14 +47,22 @@
           
             <div class="score-header">Score</div>
         <div class="score-compare">
-            <div class="numbers">0</div>
+            <div class="numbers" id="humanScore">0</div>
             <div class="numbers">-</div>
-            <div class="numbers">0</div>
+            <div class="numbers" id="computerScore">0</div>
         </div>
         </div>
 
         <div class="status">
-            <h1>YOU WIN!</h1>
+            <h1 id="win">YOU WIN!</h1>
+            <h1 id="lose">YOU LOSE!</h1>
+            <h1 id="tie">TIE!</h1>
+        </div>
+
+        <div class="tryAgain">
+            <div id="playAgain" onClick="window.location.reload();">Play Again?</div>
+
+
         </div>
     </div>
     

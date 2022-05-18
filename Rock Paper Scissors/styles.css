@@ -51,6 +51,9 @@ body {
     border: 1px solid black;
     margin: 0 .7rem;
     cursor: pointer;
+    background-color: #9ea3a3;
+    font-size: .8em;
+    font-family: 'Press Start 2P';
 }
 
 
@@ -64,10 +67,12 @@ body {
     border: 1px solid black;
     margin: 0 .7rem;
     cursor: pointer;
+    background-color: #9ea3a3;
+    font-size: .8em;
+    font-family: 'Press Start 2P';
 }
 
-
-.computerButton:hover {
+.computerButtonOnSelect {
     color: white;
     background-color: black;
 }
@@ -103,6 +108,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#win {
+    display: none;
+}
+
+#lose {
+    display: none;
+}
+
+#tie {
+    display: none;
+}
+
+.tryAgain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playAgain {
+    display: none;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #9ea3a3;
+    font-size: .8em;
+    font-family: 'Press Start 2P';
+}
+
+#playAgain:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
+.test {
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 0 .7rem;
+    cursor: pointer;
+    background-color: #9ea3a3;
+    font-family: 'Press Start 2P';
 }
 
 

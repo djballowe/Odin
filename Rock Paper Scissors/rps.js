@@ -1,87 +1,112 @@
-function userChoice() {
-        user = 'paper';
-        return user;
-}
+     
 
-function userRock() {
-        user = 'rock';
-        return user;
-}
+let tie = 0;
+let roundNumber = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-function userScissors() {
-        user = 'scissors';
-        return user;
-}
+const buttons = document.querySelectorAll('button');
+const hScore = document.getElementById('humanScore');
+const cScore = document.getElementById('computerScore');       
+        
+
+
+
 
 
 function computerPlay() {
+        const computerButtons = document.querySelectorAll('.computerButton');
+        
         let choice = ['paper', 'rock', 'scissors'];
         let ans = Math.floor(Math.random()*choice.length);
-        let cpuChoice = choice[ans];
-        return cpuChoice;
-}
-
-const btn = document.querySelector('.human');
-btn.onclick = () => game();
-
-
-
-function game() {
-        let roundNumber = 0;
-        let humanScore = 0;
-        let computerScore = 0;
-        
-
-                const playRound = (userChoice(), computerPlay()) => {
-                
-                        if (cSelection === 'paper' && pSelection === 'scissors') {
-                                roundNumber++;
-                                humanScore++;    
-                                return 'You Win! Scissors beats paper';
-                                
-                        }
-                        if (cSelection === 'rock' && pSelection === 'scissors') {
-                                roundNumber++;
-                                computerScore++; 
-                                return 'You Lose! Rock beats scissors';
-                        }
-                        if (cSelection === 'scissors' && pSelection === 'scissors') {
-                                roundNumber++;
-                                return 'TIE';
-                        }
-                        if (cSelection === 'paper' && pSelection === 'rock') {
-                                roundNumber++;
-                                computerScore++;    
-                                return 'You Lose! Paper beats rock';
-                        }
-                        if (cSelection === 'rock' && pSelection === 'rock') {
-                                roundNumber++;
-                                return 'TIE';
-                        }
-                        if (cSelection === 'scissors' && pSelection === 'rock') {
-                                roundNumber++;
-                                humanScore++;    
-                                return 'You Win! Rock beats scissors';
-                        } 
-                        if (cSelection === 'paper' && pSelection === 'paper') {
-                                
-                                return 'TIE';
-                        }  
-                        if (cSelection === 'rock' && pSelection === 'paper') {
-                                roundNumber++;
-                                humanScore++;    
-                                return 'You Win! Paper beats rock';
-                        }
-                        if (cSelection === 'scissors' && pSelection === 'paper') {
-                                roundNumber++;
-                                computerScore++;    
-                                return 'You Lose! Scissors beats paper';
-                        }
-                
-
+        let cSelection = choice[ans];
+        if (cSelection === 'paper') {
+                if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
                 }
-        console.log(pSelection);
-        console.log(`Human Score: ${humanScore}`);
-        console.log(`Computer Score: ${computerScore}`);
-        console.log(`Round: ${roundNumber}`);
+                if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Cpaper').classList.add('computerButtonOnSelect');
+                }
+        }
+        if (cSelection === 'rock') {
+                if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
+                }
+                if (document.getElementById('Cscissors').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cscissors').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Crock').classList.add('computerButtonOnSelect');
+                }
+        } 
+        if (cSelection === 'scissors') {
+                if (document.getElementById('Crock').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Crock').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
+                }
+                if (document.getElementById('Cpaper').classList.contains('computerButtonOnSelect')) {
+                        document.getElementById('Cpaper').classList.toggle('computerButtonOnSelect');
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
+                } else {
+                        document.getElementById('Cscissors').classList.add('computerButtonOnSelect');
+                }
+                
+        }
+        
+        return cSelection;
 }
+
+
+function playRound(pSelection) {
+        let cSelection = computerPlay();
+
+        const status = document.getElementById('win');
+        const lose = document.getElementById('lose');
+        const playAgain = document.getElementById('playAgain'); 
+        
+        
+        if (pSelection === 'rock' && cSelection === 'scissors' ||
+        pSelection === 'scissors' && cSelection === 'paper' ||
+        pSelection === 'paper' && cSelection === 'rock') {
+
+
+                humanScore += 1;
+
+
+                if (humanScore === 5) {
+                        status.style.display = 'flex';
+                        playAgain.style.display = 'flex';
+                }
+
+        } else if (pSelection === cSelection) {
+                tie ++;
+        
+        } else {
+                computerScore++;
+
+                if (computerScore === 5) {
+                        lose.style.display = 'flex';
+                        playAgain.style.display = 'flex';
+                        
+                }
+        }
+
+        hScore.textContent = `${humanScore}`;
+        cScore.textContent = `${computerScore}`;
+}
+
+buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+                if (humanScore < 5 && computerScore < 5){
+                        playRound(button.id);
+                }
+        });
+});
+
+
+
