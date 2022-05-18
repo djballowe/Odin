@@ -29,3 +29,8 @@ table {
 .one {
     background-color: #f5f7f7;
 }
+
+p {
+    text-align: center;
+    font-size: .8em;
+}
