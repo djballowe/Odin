@@ -1,10 +1,15 @@
-const personFactory = (name, age) => {
-    const sayHello = () => console.log('hello!');
-    return { name, age, sayHello };
+const proto = {
+    hello () {
+      return `Hello, my name is ${ this.name }`;
+    }
   };
   
-  const jeff = personFactory('jeff', 27);
+  const greeter = (name) => Object.assign(Object.create(proto), {
+    name
+  });
   
-  console.log(jeff.name); // 'jeff'
+  const george = greeter('george');
   
-  jeff.sayHello();
+  const msg = george.hello();
+  
+  console.log(george);
