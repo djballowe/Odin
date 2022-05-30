@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+
+  th {
+    background-color: #ebeae8;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  caption {
+    padding: 10px;
+  }
+
+.one {
+    background-color: #f5f7f7;
+}
+
+p {
+    text-align: center;
+    font-size: .8em;
+}
