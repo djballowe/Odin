@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    font-family: 'Baloo 2', cursive;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -44,3 +43,60 @@ table {
 
 /* Main CSS*/
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding: 20px;
+}
+
+#hamburger {
+    position: fixed;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-out-list li {
+    padding: 10px 0;
+}
+
+#pop-out {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#img {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 400px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.938);
+    z-index: 9;
+}
