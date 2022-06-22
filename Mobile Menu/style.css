@@ -155,18 +155,6 @@ ul {
     z-index: 10;
 }
 
-.pop-out {
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeIn 0.2s ease-in-out forwards;
-}
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -180,6 +168,30 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+.pop-out-close {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }
 
 #img {
@@ -197,11 +209,11 @@ img {
 .overlay {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.938);
-  animation: fadeIn 0.2s ease-in-out forwards;
+  animation: fadeinout 0.2s linear forwards;
   height: 100%;
   width: 100%;
 }
-@keyframes fadeIn {
+@keyframes fadeinout {
     from {
         opacity: 0;
     }
