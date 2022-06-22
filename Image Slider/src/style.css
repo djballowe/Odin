@@ -50,6 +50,12 @@ table {
 }
 
 .image {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.shown-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,18 +66,11 @@ table {
     width: 130vh;
 }
 
-.current-img {
-
-}
-
-.hide-img {
-    display: none;
-}
-
 .controller {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 .controller-container {

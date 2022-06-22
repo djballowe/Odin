@@ -9,27 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="image">
-            <img src="./src/Images/Book-11.JPG" alt="">
+        <div class="image shown-image" data="shown">
+            <img id="img-1" src="./src/Images/Book-11.JPG" alt="">
         </div>
-        <div class="image hide-img">
-            <img src="./src/Images/Book-12.JPG" alt="">
+        <div class="image hide-img" data="hide">
+            <img id="img-2" src="./src/Images/Book-12.JPG" alt="">
         </div>
-        <div class="image hide-img">
-            <img src="./src/Images/Book-13.JPG" alt="">
+        <div class="image hide-img" data="hide">
+            <img id="img-3" src="./src/Images/Book-13.JPG" alt="">
         </div>
-        <div class="image hide-img">
-            <img src="./src/Images/Book-14.JPG" alt="">
+        <div class="image hide-img" data="hide">
+            <img id="img-4" src="./src/Images/Book-14.JPG" alt="">
         </div>
         
     </div>
     <div class="controller">
         <div class="controller-container">
-            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <svg id="left" style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
             </svg>
-            <div>0 / 4</div>
-            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <div id="counter">1 / 4</div>
+            <svg id="right" style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
         </div>
