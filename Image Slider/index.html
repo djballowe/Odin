@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Image Slider</title>
 </head>
 <body>
-    
-
-    <script src="app.js"></script>
+    <div class="container">
+        <div class="image">
+            <img src="./src/Images/Book-11.JPG" alt="">
+        </div>
+        <div class="image hide-img">
+            <img src="./src/Images/Book-12.JPG" alt="">
+        </div>
+        <div class="image hide-img">
+            <img src="./src/Images/Book-13.JPG" alt="">
+        </div>
+        <div class="image hide-img">
+            <img src="./src/Images/Book-14.JPG" alt="">
+        </div>
+        
+    </div>
+    <div class="controller">
+        <div class="controller-container">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+            </svg>
+            <div>0 / 4</div>
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+            </svg>
+        </div>
+    </div>
+    <script src="./src/app.js"></script>
 </body>
 </html>
