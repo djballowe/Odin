@@ -3,6 +3,9 @@ const email = document.getElementById('mail');
 const emailError = document.querySelector('#mail + .error');
 const zipCode = document.getElementById('zip');
 const zipCodeError = document.querySelector('#zip + .error');
+const pass = document.getElementById('password');
+const confirmPass = document.getElementById('confirm-pass');
+const confirmPassError = document.querySelector('#confirm-pass + .error');
 
 
 
@@ -52,3 +55,13 @@ zipCode.addEventListener('input', (e) => {
     }
 })
 
+confirmPass.addEventListener('input', (e) => {
+    if (confirmPass.value === pass.value) {
+        confirmPassError.textContent = '';
+        confirmPassError.className = 'error';
+        confirmPass.style.backgroundColor = '#C5ECAF';
+    } else {
+        confirmPassError.textContent = 'Passwords do not match';
+        confirmPass.style.backgroundColor = '#ECAFB4';
+    }
+})

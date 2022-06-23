@@ -24,17 +24,18 @@
                 </div>
                 <div class="entries">
                     <label for="">Zip Code
-                        <input id="zip" type="text">
+                        <input id="zip" type="text" required>
                         <span class="error" aria-live="polite"></span>
                     </label>
                 </div>
                 <div class="entries">
                     <label for="">Password</label>
-                    <input type="password">
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div class="entries">
                     <label for="">Confirm Password</label>
-                    <input type="password">
+                    <input type="password" id="confirm-pass" name="confirm-pass" required>
+                    <span class="error" aria-live="polite"></span>
                 </div>
             </form>
         </div>
