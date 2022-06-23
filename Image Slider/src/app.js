@@ -5,19 +5,37 @@ const right = document.getElementById('right');
 const index = document.getElementById('counter');
 
 let slide = 1;
-if (slide > slideshow.length - 1) {
-  resetSlide();
-}
 
 right.addEventListener('click', () => {
+  if (slide > slideshow.length - 1) {
+    resetSlideForward();
+  } else {
     slideshow[slide].style.display = 'flex';
     slideshow[slide - 1].style.display = 'none';
     slide++;
+  }
 })
 
-function resetSlide() {
+left.addEventListener('click', () => {
+  console.log(slide)
+  if (slide === 1) {
+    resetSlideBackward();
+  } else {
+    slideshow[slide - 1].style.display = 'none';
+    slideshow[slide - 2].style.display = 'flex';
+    slide--;
+  }
+})
+
+function resetSlideForward() {
   slide = 1;
   slideshow[0].style.display = 'flex';
-  slideshow[slideshow.length - 1] = 'none';
+  slideshow[slideshow.length - 1].style.display = 'none';
+}
+
+function resetSlideBackward() {
+  slide = slideshow.length;
+  slideshow[slideshow.length - 1].style.display = 'flex';
+  slideshow[0].style.display = 'none';
 }
 
