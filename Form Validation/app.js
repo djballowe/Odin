@@ -1,6 +1,8 @@
 const form = document.getElementById('form');
 const email = document.getElementById('mail');
 const emailError = document.querySelector('#mail + .error');
+const zipCode = document.getElementById('zip');
+const zipCodeError = document.querySelector('#zip + .error');
 
 
 
@@ -26,7 +28,7 @@ email.addEventListener('input', (e) => {
     } else {
         showError();
     }
-})
+});
 
 function showError() {
     if (email.validity.valueMissing) {
@@ -37,4 +39,16 @@ function showError() {
         emailError.textContent = `Email needs to be at least ${email.minLength} characters, you entered ${email.value.length}`
     }
 }
+
+zipCode.addEventListener('input', (e) => {
+    const zipValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+    if (zipValid.test(zipCode.value)) {
+        zipCodeError.textContent = '';
+        zipCodeError.className = 'error';
+        zipCode.style.backgroundColor = '#C5ECAF';
+    } else {
+        zipCodeError.textContent = 'Please enter valid US zip code';
+        zipCode.style.backgroundColor = '#ECAFB4';
+    }
+})
 
