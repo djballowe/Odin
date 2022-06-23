@@ -14,6 +14,7 @@ right.addEventListener('click', () => {
     slideshow[slide - 1].style.display = 'none';
     slide++;
   }
+  index.textContent = `${slide} / 4`
 })
 
 left.addEventListener('click', () => {
@@ -25,6 +26,7 @@ left.addEventListener('click', () => {
     slideshow[slide - 2].style.display = 'flex';
     slide--;
   }
+  index.textContent = `${slide} / 4`
 })
 
 function resetSlideForward() {
