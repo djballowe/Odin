@@ -3,17 +3,47 @@
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+<style>
+    .search {
+        padding: 30px;
+    }
+
+    .images {
+        padding: 30px;
+    }
+</style>
 <body>
-  <img src="#">
+    <div class="search">
+        <label for="">Search
+            <input type="text" name="" id="" placeholder="...Search">
+        </label>
+    </div>
+    <div class="images">
+        <img src="">
+        <button>Get new gif</button>
+    </div>
   <script>
 
-  
+const button = document.querySelector('button');
 const img = document.querySelector('img');
-  fetch('https://api.giphy.com/v1/gifs/translate?api_key=zM7XRAOJBzaoB3HGuBfghgaSkAnT7Luj&s=cats', {mode: 'cors'})
-    .then(function(response) {
-      console.log(response.json());
-    });
+function getImage() {
+    fetch('https://api.giphy.com/v1/gifs/translate?api_key=zM7XRAOJBzaoB3HGuBfghgaSkAnT7Luj&s=cats', {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(response) {
+            img.src = response.data.images.original.url;
+            console.log(response.data.title)
+        })
+} 
+    button.addEventListener('click', () => {
+        getImage();
+    })
 
+getImage();
+
+    
+    
 
   </script>
 </body>
