@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="form">
+                <div class="entries">
+                    <label for="">Email
+                        <input type="email" id="mail" required>
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                </div>
+                <div class="entries">
+                    <label for="">Country
+                        <select name="countries" id="countries"></select>
+                    </label>
+                </div>
+                <div class="entries">
+                    <label for="">Zip Code
+                        <input id="zip" type="text" required>
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                </div>
+                <div class="entries">
+                    <label for="">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="entries">
+                    <label for="">Confirm Password</label>
+                    <input type="password" id="confirm-pass" name="confirm-pass" required>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
