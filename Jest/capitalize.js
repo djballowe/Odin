@@ -1,6 +1,5 @@
 function capitalize(string) {
-    string[0] = string[0].toUpperCase();
-    return string[0];
+  let firstLetter = string[0].toUpperCase() + string.slice(1);
+  return firstLetter;
 }
-
-console.log(capitalize('test'));
+module.exports = capitalize;
